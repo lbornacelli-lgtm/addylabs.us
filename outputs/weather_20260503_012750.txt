@@ -1,0 +1,20 @@
+# AddyLabs Florida Weather Broadcast Script
+### 30-Second Spot
+
+---
+
+*"Good evening, Florida! Here's your weekend weather outlook.*
+
+*Tonight, expect mostly cloudy skies with a slight chance of rain showers wrapping up before 9 o'clock. Overnight lows will dip down to around 55 degrees, with north winds at 6 to 9 miles per hour and gusts up to 17. Any rainfall will be light — less than a tenth of an inch.*
+
+*But here's the good news — Sunday shapes up to be a beautiful day! Sunny skies return with a pleasant high near 79 degrees. Perfect weather to get outside!*
+
+*Sunday night stays comfortable with mostly clear skies and a low around 54 degrees.*
+
+*No active weather alerts at this time. Enjoy your weekend, Florida!"*
+
+---
+
+**⏱ Estimated Read Time:** ~28 seconds
+**Active Alerts:** None
+**Produced for:** AddyLabs Florida Broadcasting

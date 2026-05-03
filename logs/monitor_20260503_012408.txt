@@ -1,0 +1,68 @@
+
+Timestamp: 20260503_012408
+VPN Tunnel (10.0.0.1): UP
+Services: {'litellm': 'active', 'rstudio-server': 'active', 'piper-tts': 'activating', 'kokoro-tts': 'activating', 'wg-quick@wg0': 'active'}
+Load Average: 0.39
+Memory Used: 33.0%
+Disk Used: 39.2%
+
+
+AI Summary:
+## AddyLabs Infrastructure Status Report
+**Timestamp:** 2026-05-03 01:24:08
+
+---
+
+### 🟢 Overall System Health: HEALTHY (with minor notices)
+
+---
+
+### ✅ Healthy Components
+
+| Component | Status |
+|---|---|
+| VPN Tunnel (10.0.0.1) | UP |
+| litellm | active |
+| rstudio-server | active |
+| wg-quick@wg0 | active |
+| Load Average | 0.39 ✅ |
+| Memory Used | 33.0% ✅ |
+| Disk Used | 39.2% ✅ |
+
+---
+
+### ⚠️ Flagged Issues
+
+#### [INFO] `piper-tts` — Status: `activating`
+> Service is still starting up and has not reached `active` state.
+
+**Remediation:**
+```bash
+systemctl status piper-tts        # Check progress/errors
+journalctl -u piper-tts -n 50     # Review recent logs
+```
+
+#### [INFO] `kokoro-tts` — Status: `activating`
+> Service is still starting up and has not reached `active` state.
+
+**Remediation:**
+```bash
+systemctl status kokoro-tts       # Check progress/errors
+journalctl -u kokoro-tts -n 50    # Review recent logs
+```
+
+> 💡 **Note:** Both TTS services activating simultaneously at ~01:24 may indicate a scheduled restart or system boot. Monitor for transition to `active`; if stuck, consider `systemctl restart <service>`.
+
+---
+
+### 📊 Resource Summary
+
+| Metric | Value | Threshold | Status |
+|---|---|---|---|
+| Load Average | 0.39 | <3.00 | 🟢 Normal |
+| Memory Used | 33.0% | <80% | 🟢 Normal |
+| Disk Used | 39.2% | <80% | 🟢 Normal |
+
+---
+
+*No critical issues detected. System operating normally.*
