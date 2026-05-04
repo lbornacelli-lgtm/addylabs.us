@@ -10,10 +10,10 @@ def get_weather():
     # Use coordinates for Gainesville FL instead of zone code
     url = "https://api.weather.gov/points/29.6742,-82.3363"
     headers = {"User-Agent": "AddyLabs/1.0 lbornacelli@gmail.com"}
-    response = requests.get(url, headers=headers, timeout=10)
+    response = requests.get(url, headers=headers, timeout=30)
     response.raise_for_status()
     forecast_url = response.json()["properties"]["forecast"]
-    forecast = requests.get(forecast_url, headers=headers, timeout=10)
+    forecast = requests.get(forecast_url, headers=headers, timeout=30)
     forecast.raise_for_status()
     periods = forecast.json()["properties"]["periods"][:3]
     raw = "\n".join([f"{p['name']}: {p['detailedForecast']}" for p in periods])

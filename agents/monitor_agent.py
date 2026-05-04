@@ -65,3 +65,14 @@ Disk Used: {stats['disk_used_pct']}%
 
 if __name__ == "__main__":
     run_monitor()
+
+def deliver_to_shared(filepath):
+    import subprocess
+    result = subprocess.run(
+        ["scp", filepath, "lawborn@10.0.0.1:/home/lawborn/shared/reports/"],
+        capture_output=True
+    )
+    if result.returncode == 0:
+        print(f"Delivered to shared reports folder!")
+    else:
+        print(f"Delivery failed: {result.stderr.decode()}")
