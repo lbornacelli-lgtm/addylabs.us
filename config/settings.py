@@ -27,3 +27,8 @@ EC2_INSTANCE_ID = "i-00adbd5534f0684b0"
 BASE_DIR = os.path.expanduser("~/addylabs")
 OUTPUTS_DIR = f"{BASE_DIR}/outputs"
 LOGS_DIR = f"{BASE_DIR}/logs"
+
+# Private subnet for RDS/ElastiCache
+PRIVATE_SUBNET_ID = 'subnet-02cb183077dd3f022'
+RDS_SG_ID = 'sg-0acb2c1806767634c'
+NEW_VPC_ID = 'vpc-025e14e1244cbc365'
